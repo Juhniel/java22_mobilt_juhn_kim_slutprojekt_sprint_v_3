@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584839649705",
+    "project_id": "flutter-chatting-79ad1",
+    "storage_bucket": "flutter-chatting-79ad1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584839649705:android:9d625f7e3d6480d9ab8cb8",
+        "android_client_info": {
+          "package_name": "com.juhnkim.java22_mobilt_juhn_kim_slutprojekt_sprint_v_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcn42BIFU3lDbiLPYbYJj_6bF157LcOK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
