@@ -27,20 +27,20 @@ class _RegisterPageState extends State<RegisterPage> {
           content: Text("Passwords do not match!"),
         ),
       );
-      return;
-    }
-    // get auth service
-    final authService = Provider.of<AuthService>(context, listen: false);
+    } else {
+      // get auth service
+      final authService = Provider.of<AuthService>(context, listen: false);
 
-    try {
-      await authService.signUpWithEmailAndPassword(
-          emailController.text, passwordController.text);
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-         SnackBar(
-             content: Text(e.toString()),
-         ),
-      );
+      try {
+        await authService.signUpWithEmailAndPassword(
+            emailController.text, passwordController.text);
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(e.toString()),
+          ),
+        );
+      }
     }
   }
 
@@ -60,20 +60,24 @@ class _RegisterPageState extends State<RegisterPage> {
                   size: 80,
                 ),
 
+                const SizedBox(height: 20),
                 // create account
                 const Text(
                   "Let's create an account!",
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 22,
                   ),
                 ),
 
+                const SizedBox(height: 25),
                 // Email
                 MyTextField(
                   controller: emailController,
                   hintText: 'Email',
                   obscureText: false,
                 ),
+
+                const SizedBox(height: 10),
 
                 // Password
                 MyTextField(
@@ -82,17 +86,23 @@ class _RegisterPageState extends State<RegisterPage> {
                   obscureText: true,
                 ),
 
+                const SizedBox(height: 10),
+
                 // Confirm Password
                 MyTextField(
                   controller: confirmPasswordController,
                   hintText: 'Confirm Password',
-                  obscureText: false,
+                  obscureText: true,
                 ),
+
+                const SizedBox(height: 20),
 
                 // Sign up Button
                 MyButton(onTap: signUp, text: "Sign Up"),
 
+                const SizedBox(height: 10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text('Already a member?'),
                     const SizedBox(width: 4),
