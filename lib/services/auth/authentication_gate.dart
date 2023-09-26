@@ -1,13 +1,11 @@
-// Import necessary packages
-import 'package:firebase_auth/firebase_auth.dart'; // For Firebase authentication
-import 'package:flutter/material.dart'; // Basic Flutter widgets
-import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/home_page.dart'; // Home page widget
-import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/login_or_register.dart'; // Login or Register widget
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/logged_in_page.dart';
+import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/login_or_register.dart';
 
-// Create a stateless widget called AuthGate
-class AuthGate extends StatelessWidget {
+class AuthenticationGate extends StatelessWidget {
   // Constructor to initialize the widget
-  const AuthGate({super.key});
+  const AuthenticationGate({super.key});
 
   // Describe the UI elements in this widget
   @override
@@ -21,7 +19,7 @@ class AuthGate extends StatelessWidget {
             builder: (context, snapshot) {
               // If the user is logged in
               if(snapshot.hasData) {
-                return const HomePage(); // Show the home page
+                return const LoggedInPage(); // Show the home page
               } else {
                 // If the user is not logged in
                 return const LoginOrRegister(); // Show the login or register page

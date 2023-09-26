@@ -16,7 +16,7 @@ Widget build(BuildContext context) {
       child: Container(
         padding: const EdgeInsets.all(25),
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(9)
         ),
         child: Center(

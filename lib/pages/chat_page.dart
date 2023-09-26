@@ -1,9 +1,8 @@
-// Import necessary packages
-import 'package:cloud_firestore/cloud_firestore.dart'; // Firebase Firestore database
-import 'package:firebase_auth/firebase_auth.dart'; // Firebase authentication
-import 'package:flutter/material.dart'; // Basic Flutter widgets
-import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/components/my_text_field.dart'; // Custom text field
-import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/chat/chat_service.dart'; // Chat service
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/components/my_text_field.dart';
+import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/chat/chat_service.dart';
 
 // Create a stateful widget called ChatPage
 class ChatPage extends StatefulWidget {
@@ -126,7 +125,7 @@ class _ChatPageState extends State<ChatPage> {
         IconButton(
           onPressed: sendMessage,
           icon: const Icon(
-            Icons.arrow_upward,
+            Icons.send,
             size: 40,
           ),
         ),

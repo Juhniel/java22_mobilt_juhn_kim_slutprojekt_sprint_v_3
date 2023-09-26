@@ -47,7 +47,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white70,
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -55,15 +55,16 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.message,
-                  size: 80,
+                Image.asset(
+                  'assets/peepocomfy.gif',
+                  height: 120,
+                  width: 120,
                 ),
 
                 const SizedBox(height: 20),
                 // create account
                 const Text(
-                  "Let's create an account!",
+                  "Register here!",
                   style: TextStyle(
                     fontSize: 22,
                   ),
@@ -104,13 +105,14 @@ class _RegisterPageState extends State<RegisterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Already a member?'),
+                    const Text('Already have an account?'),
                     const SizedBox(width: 4),
                     GestureDetector(
                       onTap: widget.onTap,
                       child: const Text(
                         'Login now',
                         style: TextStyle(
+                          color: Colors.blueAccent,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

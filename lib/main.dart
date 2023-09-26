@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/firebase_options.dart';
-import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/auth_gate.dart';
+import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/authentication_gate.dart';
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthGate(),
+      home: AuthenticationGate(),
     );
   }
 }

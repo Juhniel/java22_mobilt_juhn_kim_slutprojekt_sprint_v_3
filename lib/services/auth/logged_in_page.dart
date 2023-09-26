@@ -5,14 +5,14 @@ import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/pages/chat_page.da
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LoggedInPage extends StatefulWidget {
+  const LoggedInPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LoggedInPage> createState() => _LoggedInPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoggedInPageState extends State<LoggedInPage> {
   // instance of auth
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: Text('Welcome ${_auth.currentUser?.email ?? 'Unknown'}!'),
         actions: [
           // sign out button
           IconButton(
