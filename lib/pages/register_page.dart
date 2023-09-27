@@ -52,6 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -120,6 +121,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ],
                 )
               ],
+            ),
             ),
           ),
         ),

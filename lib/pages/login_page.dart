@@ -59,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Padding(
             // Add padding around the contents
             padding: const EdgeInsets.all(25.0),
+          child: SingleChildScrollView(
             child: Column(
               // Use a column layout
               mainAxisAlignment: MainAxisAlignment.center,
@@ -116,6 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 )
               ],
+            ),
             ),
           ),
         ),
