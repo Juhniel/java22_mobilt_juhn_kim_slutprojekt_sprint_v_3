@@ -1,16 +1,8 @@
 # java22_mobilt_juhn_kim_slutprojekt_sprint_v_3
 
-A new Flutter project.
+A chatting application for web and android
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project uses Firestore as a realtime database and for authentication. Users are able to create a new account and log in after the account has been created. 
+Allowing the logged-in user to be able to chat with other users. 
