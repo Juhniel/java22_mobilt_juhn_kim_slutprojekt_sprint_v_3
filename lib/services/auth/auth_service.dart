@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 
-// Create a class called AuthService that notifies its listeners of changes.
 class AuthService extends ChangeNotifier {
   // instance of auth
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -18,14 +17,6 @@ class AuthService extends ChangeNotifier {
             email: email,
             password: password,
         );
-
-        // Add a new document for this user in the Firestore 'users' collection
-        // or merge it if it already exists
-        // Kanske ta bort?
-        _fireStore.collection('users').doc(userCredential.user!.uid).set({
-          'uid': userCredential.user!.uid,
-          'email': email,
-        }, SetOptions(merge: true));
 
         // Return the signed-in user's credentials
         return userCredential;
@@ -53,7 +44,6 @@ class AuthService extends ChangeNotifier {
         // Return the new user's credentials
         return userCredential;
       } on FirebaseAuthException catch (e) {
-        // Catch and throw any errors
         throw Exception(e.code);
       }
   }

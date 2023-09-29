@@ -17,7 +17,6 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-// The internal state class for LoginPage
 class _LoginPageState extends State<LoginPage> {
   // Create text controllers to manage user inputs
   final emailController = TextEditingController();

@@ -6,7 +6,7 @@ import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/model/message.dart
 
 // Create a class ChatService which extends ChangeNotifier to allow UI update notifications
 class ChatService extends ChangeNotifier {
-  // Initialize instances of FirebaseAuth and FirebaseFirestore
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final FirebaseFirestore _fireStore = FirebaseFirestore.instance;
 
@@ -30,8 +30,8 @@ class ChatService extends ChangeNotifier {
 
     // Generate a unique chat room ID using the sender and receiver IDs
     List<String> ids = [currentUserId, receiverId];
-    ids.sort(); // Sorting ensures the chat room ID is always the same for the same pair of users
-    String chatRoomId = ids.join("_"); // Create chatRoomId by joining the two sorted ids
+    ids.sort();
+    String chatRoomId = ids.join("_");
 
     // Add the new message to Firestore
     await _fireStore.collection('chat_rooms')
@@ -42,9 +42,8 @@ class ChatService extends ChangeNotifier {
 
   // Method to retrieve messages
   Stream<QuerySnapshot> getMessages(String userId, String otherUserId) {
-    // Generate a unique chat room ID using the user and the other user's IDs
     List<String> ids = [userId, otherUserId];
-    ids.sort(); // Sorting ensures the chat room ID is always the same for the same pair of users
+    ids.sort();
     String chatRoomId = ids.join("_");
 
     // Fetch and return the message snapshots ordered by timestamp

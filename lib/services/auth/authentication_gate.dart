@@ -4,7 +4,7 @@ import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/logg
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/auth/login_or_register.dart';
 
 class AuthenticationGate extends StatelessWidget {
-  // Constructor to initialize the widget
+
   const AuthenticationGate({super.key});
 
   // Describe the UI elements in this widget
@@ -15,13 +15,11 @@ class AuthenticationGate extends StatelessWidget {
         body: StreamBuilder(
           // Listen to authentication state changes
             stream: FirebaseAuth.instance.authStateChanges(),
-            // Build the UI based on the authentication state
             builder: (context, snapshot) {
-              // If the user is logged in
+              // if user is logged in or not
               if(snapshot.hasData) {
                 return const LoggedInPage(); // Show the home page
               } else {
-                // If the user is not logged in
                 return const LoginOrRegister(); // Show the login or register page
               }
             }

@@ -13,7 +13,7 @@ class LoggedInPage extends StatefulWidget {
 }
 
 class _LoggedInPageState extends State<LoggedInPage> {
-  // instance of auth
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   // sign user out

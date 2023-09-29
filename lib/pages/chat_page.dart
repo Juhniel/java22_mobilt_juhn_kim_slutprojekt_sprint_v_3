@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/components/my_text_field.dart';
 import 'package:java22_mobilt_juhn_kim_slutprojekt_sprint_v_3/services/chat/chat_service.dart';
 
-// Create a stateful widget called ChatPage
 class ChatPage extends StatefulWidget {
-  // Declare variables for the receiver's email and user ID
+
   final String receiverUserEmail;
   final String receiverUserId;
 
@@ -17,12 +16,10 @@ class ChatPage extends StatefulWidget {
     required this.receiverUserId,
   });
 
-  // Create the state for ChatPage
   @override
   State<ChatPage> createState() => _ChatPageState();
 }
 
-// Internal state class for ChatPage
 class _ChatPageState extends State<ChatPage> {
   // Text controller for message input
   final TextEditingController _messageController = TextEditingController();
